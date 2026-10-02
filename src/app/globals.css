@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #0d1b36;
+  --navy-2: #15284c;
+  --gold: #c9a227;
+  --gold-soft: #f4e7bc;
+  --paper: #f5f7fb;
+  --ink: #1a2332;
+}
+
+@theme inline {
+  --color-navy: var(--navy);
+  --color-navy-2: var(--navy-2);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --font-sans: var(--font-dm);
+  --font-display: var(--font-playfair);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-dm), system-ui, sans-serif;
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+@media print {
+  .no-print { display: none !important; }
+  .print-bill { box-shadow: none !important; }
+}
